@@ -1,16 +1,64 @@
-# React + Vite
+# Satish Jadav - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Satish Jadav, featuring selected projects, experience, skills, and contact details.
 
-Currently, two official plugins are available:
+**Live site:** [portfolio-livid-chi-65.vercel.app](https://portfolio-livid-chi-65.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Built With
 
-## React Compiler
+- React 19
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lenis
+- React Icons
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project Structure
 
-## Expanding the ESLint configuration
+The Vite application lives in the `Portfolio` directory:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+Portfolio/
+	public/       Static assets
+	src/          React components, sections, styles, and data
+	index.html    Application entry HTML
+	package.json  Scripts and dependencies
+```
+
+## Local Development
+
+```bash
+cd Portfolio
+npm install
+npm run dev
+```
+
+Open the local URL shown by Vite in your browser.
+
+## Production Build
+
+```bash
+cd Portfolio
+npm run build
+npm run preview
+```
+
+Run the linter with:
+
+```bash
+npm run lint
+```
+
+## Deploying to Vercel
+
+When importing this repository into Vercel, use these settings:
+
+| Setting | Value |
+| --- | --- |
+| Framework Preset | Vite |
+| Root Directory | `Portfolio` |
+| Install Command | `npm install` |
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+
+Vercel automatically creates a new deployment when changes are pushed to the `main` branch.
