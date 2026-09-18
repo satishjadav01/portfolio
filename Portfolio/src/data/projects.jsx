@@ -42,6 +42,7 @@ export const projects = [
     discr: "Multi-tenant SaaS platform to automate Google review collection via WhatsApp & Email with private feedback shielding.",
     tags: [
       { name: "Next.js", icon: <RiNextjsLine color="#FFFFFF" /> },
+      { name: "Node.js", icon: <FaNodeJs color="#339933" /> },
       { name: "PostgreSQL", icon: <SiPostgresql color="#4169E1" /> },
       { name: "Prisma", icon: <SiPrisma color="#2D3748" /> },
       { name: "Tailwind", icon: <RiTailwindCssFill color="#06B6D4" /> },
