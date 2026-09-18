@@ -17,17 +17,17 @@
 }
 
 .light {
-  --bg-base: #f4f4f5;
+  --bg-base: #f8fafc;
   --bg-surface: #ffffff;
-  --bg-surface-hover: #e4e4e7;
-  --bg-card: rgba(255, 255, 255, 0.6);
+  --bg-surface-hover: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.75);
   
-  --text-main: #18181b;
-  --text-secondary: #3f3f46;
-  --text-muted: #71717a;
+  --text-main: #0b1329;
+  --text-secondary: #1e293b;
+  --text-muted: #475569;
   
-  --border-color: rgba(0, 0, 0, 0.08);
-  --border-strong: rgba(0, 0, 0, 0.15);
+  --border-color: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.14);
 }
 
 @theme {
@@ -147,3 +147,26 @@ body::after {
     transform: translateX(100%);
   }
 }
+
+/* ── Project Card Text & Badge Colors ── */
+.project-card-desc {
+  color: var(--text-secondary);
+}
+
+.light .project-card-desc {
+  color: #000000 !important;
+}
+
+.light .project-card-heading {
+  color: #000000 !important;
+}
+
+.light .project-card-heading:hover {
+  color: #f97316 !important;
+}
+
+.light .project-card-tag {
+  color: #000000 !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}

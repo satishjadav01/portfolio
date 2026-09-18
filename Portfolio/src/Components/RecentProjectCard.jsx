@@ -37,12 +37,12 @@ function RecentProjectCard({ pic, heading, discr, tags = [] }) {
       {/* Content Column */}
       <div className="flex-1 flex flex-col gap-2.5 relative z-10 w-full min-w-0 pr-8 sm:pr-10">
         {/* Heading */}
-        <h3 className="text-text-main font-bold text-xl sm:text-2xl tracking-tight transition-colors duration-300 group-hover:text-orange-400">
+        <h3 className="project-card-heading text-text-main font-bold text-xl sm:text-2xl tracking-tight transition-colors duration-300 group-hover:text-orange-400">
           {heading}
         </h3>
 
         {/* Description */}
-        <p className="text-text-secondary text-sm sm:text-base font-normal leading-relaxed">
+        <p className="project-card-desc text-text-secondary text-sm sm:text-base font-medium leading-relaxed">
           {discr}
         </p>
 
@@ -53,7 +53,7 @@ function RecentProjectCard({ pic, heading, discr, tags = [] }) {
             return (
               <span
                 key={isObject ? tag.name : index}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium text-text-secondary bg-surface border border-border-strong backdrop-blur-sm group-hover:border-orange-500/25 group-hover:bg-surface-hover group-hover:text-text-main transition-all duration-300"
+                className="project-card-tag inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-text-secondary bg-surface border border-border-strong backdrop-blur-sm group-hover:border-orange-500/25 group-hover:bg-surface-hover group-hover:text-text-main transition-all duration-300"
               >
                 {isObject ? (
                   <>
