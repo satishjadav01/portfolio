@@ -22,8 +22,8 @@ function Sidebar() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
-    <div className="animated-border relative flex flex-col p-[2px] rounded-2xl lg:sticky top-20 shadow-2xl">
-      <div className="bg-surface p-5 lg:p-10 rounded-2xl items-center gap-8 flex flex-col relative">
+    <div className="animated-border relative flex flex-col p-[2px] rounded-2xl shadow-2xl w-full">
+      <div className="bg-surface p-5 lg:p-8 xl:p-10 rounded-2xl items-center gap-8 flex flex-col relative">
         <div className="absolute top-4 right-4 z-10">
           <ThemeToggle />
         </div>

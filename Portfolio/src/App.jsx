@@ -96,11 +96,11 @@ function App() {
           onContactClick={() => scrollToSection(contactRef)}
         />
       </div>
-      <div className="pt-2 lg:pt-24 flex flex-col sm:max-w-4/5 xl:flex-row 2xl:max-w-1/2 lg:max-w-full xl:max-w-[80%] gap-16 lg:gap-10">
-        <div className="w-full sm:w-[350px] xl:w-[400px] shrink-0 max-w-[90%] m-auto xl:m-0">
+      <div className="pt-2 lg:pt-24 flex flex-col lg:flex-row w-full max-w-[1380px] px-4 sm:px-6 lg:px-10 gap-10 xl:gap-14 justify-center items-start mx-auto">
+        <div className="w-full sm:w-[350px] lg:w-[360px] xl:w-[390px] shrink-0 max-w-[90%] sm:max-w-full mx-auto lg:mx-0 lg:sticky lg:top-24 self-start">
           <Sidebar />
         </div>
-        <div className="flex flex-col gap-10 md:gap-20 max-w-[90%] m-auto ">
+        <div className="flex-1 flex flex-col gap-10 md:gap-20 max-w-full w-full min-w-0">
           <Intro ref={introRef} />
           <RecentProjects ref={projectsRef} />
           <Experience ref={experienceRef} />
