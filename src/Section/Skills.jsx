@@ -3,12 +3,21 @@ import Heading from "../Components/Heading";
 import SkillCard from "../Components/SkillCard";
 import SkillCategoryCard from "../Components/SkillCategoryCard";
 import { FaReact, FaGithub, FaNodeJs, FaPython, FaGitAlt, FaHtml5 } from "react-icons/fa";
-import { RiTailwindCssFill, RiNextjsLine } from "react-icons/ri";
+import { RiTailwindCssFill, RiNextjsLine, RiClaudeFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io";
 import { IoLogoCss3 } from "react-icons/io5";
-import { SiPostman, SiVercel, SiPostgresql, SiMongodb } from "react-icons/si";
+import { SiPostman, SiVercel, SiPostgresql, SiMongodb, SiOpenai, SiGithubcopilot } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { useTheme } from "../context/ThemeContext";
+import { 
+  CursorIcon, 
+  AntigravityIcon, 
+  ClaudeIcon, 
+  CodexIcon, 
+  AmazonQIcon, 
+  CopilotIcon, 
+  GrokIcon 
+} from "../Components/AIIcons";
 
 const categorizedSkills = {
   frontend: [
@@ -31,6 +40,15 @@ const categorizedSkills = {
     { logo: <FaGithub />, title: "Github", color: "#E6EDF3" },
     { logo: <SiVercel />, title: "Vercel", color: "#FFFFFF" },
     { logo: <SiPostman />, title: "Postman", color: "#FF6C37" },
+  ],
+  aiTools: [
+    { logo: <CursorIcon />, title: "Cursor", color: "#FFFFFF" },
+    { logo: <AntigravityIcon />, title: "Antigravity", color: "#A855F7" },
+    { logo: <ClaudeIcon />, title: "Claude", color: "#D96B43" },
+    { logo: <CodexIcon />, title: "Codex", color: "#FFFFFF" },
+    { logo: <AmazonQIcon />, title: "Amazon Q", color: "#2563EB" },
+    { logo: <CopilotIcon />, title: "Copilot", color: "#0284C7" },
+    { logo: <GrokIcon />, title: "Grok", color: "#FFFFFF" },
   ]
 };
 
@@ -65,6 +83,13 @@ const Skills = React.forwardRef(function Skills(props, ref) {
         {/* Tools */}
         <SkillCategoryCard title="Tools">
           {categorizedSkills.tools.map((skill, i) => (
+            <SkillCard key={i} {...skill} color={adaptColor(skill.color)} />
+          ))}
+        </SkillCategoryCard>
+
+        {/* AI Tools */}
+        <SkillCategoryCard title="AI Tools">
+          {categorizedSkills.aiTools.map((skill, i) => (
             <SkillCard key={i} {...skill} color={adaptColor(skill.color)} />
           ))}
         </SkillCategoryCard>
