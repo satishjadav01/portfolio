@@ -65,9 +65,18 @@ const Intro = React.forwardRef(function Intro(props, ref) {
         {/* Download CV Button */}
         <div className="mt-4 md:mt-0 md:ml-auto">
           <a
-            href="/Muhammad_Abdullah.pdf"
-            download
-            className="flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 text-white font-semibold text-sm uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/20 active:scale-95"
+            href="/Satish_Jadav_Resume.pdf"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("/Satish_Jadav_Resume.pdf", "_blank", "noopener,noreferrer");
+              const link = document.createElement("a");
+              link.href = "/Satish_Jadav_Resume.pdf";
+              link.download = "Satish_Jadav_Resume.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 text-white font-semibold text-sm uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-lg shadow-orange-500/20 active:scale-95 cursor-pointer"
           >
             Download CV
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">

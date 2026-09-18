@@ -21,6 +21,17 @@ const socialLinks = [
 function Sidebar() {
   const [imgLoaded, setImgLoaded] = useState(false);
 
+  const handleDownloadCV = (e) => {
+    e.preventDefault();
+    window.open("/Satish_Jadav_Resume.pdf", "_blank", "noopener,noreferrer");
+    const link = document.createElement("a");
+    link.href = "/Satish_Jadav_Resume.pdf";
+    link.download = "Satish_Jadav_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="animated-border relative flex flex-col p-[2px] rounded-2xl shadow-2xl w-full">
       <div className="bg-surface p-5 lg:p-8 xl:p-10 rounded-2xl items-center gap-8 flex flex-col relative">
@@ -99,9 +110,9 @@ function Sidebar() {
 
         {/* Download CV — white default, orange on hover */}
         <a
-          href="/Muhammad_Abdullah.pdf"
-          download
-          className="relative overflow-hidden group text-center w-full bg-surface-hover border border-border-strong text-text-main font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-sm"
+          href="/Satish_Jadav_Resume.pdf"
+          onClick={handleDownloadCV}
+          className="relative overflow-hidden group text-center w-full bg-surface-hover border border-border-strong text-text-main font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-sm cursor-pointer"
         >
           <span className="relative z-10 flex items-center justify-center gap-2">
             Download CV
