@@ -1,0 +1,204 @@
+.nav-dock-animate {
+  animation: navEnter 500ms ease-out both;
+}
+
+.reveal-section {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  filter: blur(8px);
+  transition:
+    opacity 800ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 800ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 800ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* ── Staggered Children reveal ── */
+.stagger-reveal>* {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-section.is-visible .stagger-reveal>* {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-section.is-visible .stagger-reveal>*:nth-child(1) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 100ms);
+}
+
+.reveal-section.is-visible .stagger-reveal>*:nth-child(2) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 200ms);
+}
+
+.reveal-section.is-visible .stagger-reveal>*:nth-child(3) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 300ms);
+}
+
+.reveal-section.is-visible .stagger-reveal>*:nth-child(4) {
+  transition-delay: calc(var(--reveal-delay, 0ms) + 400ms);
+}
+
+/* ── Floating Glow Animation ── */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+
+@keyframes navEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes navEnter {
+    from {
+      opacity: 0;
+      transform: translateX(16px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .nav-dock-animate,
+  .reveal-section {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
+
+/* ── Sidebar image skeleton & fade-in ── */
+.sidebar-skeleton {
+  background: linear-gradient(
+    110deg,
+    #2a2724 8%,
+    #3a3632 18%,
+    #2a2724 33%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.sidebar-img-hidden {
+  opacity: 0;
+}
+
+.sidebar-img-visible {
+  opacity: 1;
+  transition: opacity 400ms ease-out;
+}
+
+/* ── Animated Eye Icon Styles ── */
+.animated-eye-lid {
+  transform-origin: 12px 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.animated-eye-pupil {
+  transform-origin: 12px 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Trigger animation when parent element (with .group) is hovered */
+.group:hover .animated-eye-lid {
+  animation: eye-blink 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.group:hover .animated-eye-pupil {
+  animation: pupil-move 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Eye Eyelid Blink Animation */
+@keyframes eye-blink {
+  0%, 20%, 40%, 70%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  30%, 80% {
+    transform: scaleY(0.15);
+  }
+}
+
+/* Pupil Look-around and Scale Animation */
+@keyframes pupil-move {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  /* Look left */
+  10% {
+    transform: translate(-2.5px, 0) scale(1.05);
+  }
+  /* Look right */
+  20% {
+    transform: translate(2.5px, 0) scale(1.05);
+  }
+  /* Blink (shrink pupil) */
+  30% {
+    transform: translate(0, 0) scale(0.15);
+  }
+  /* Back to center */
+  40% {
+    transform: translate(0, 0) scale(1);
+  }
+  /* Look up-right */
+  55% {
+    transform: translate(1.5px, -1.5px) scale(0.95);
+  }
+  /* Look down-left */
+  65% {
+    transform: translate(-1.5px, 1.5px) scale(0.95);
+  }
+  /* Second Blink */
+  80% {
+    transform: translate(0, 0) scale(0.15);
+  }
+}
