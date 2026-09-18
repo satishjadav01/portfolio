@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Back Document 3 -->
+  <path d="M42 16 H68 C70.2 16 72 17.8 72 20 V42" stroke="#f97316" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Back Document 2 -->
+  <path d="M37 20 H63 C65.2 20 67 21.8 67 24 V42" stroke="#f97316" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Main Document 1 -->
+  <rect x="32" y="24" width="31" height="24" rx="2" fill="#1e1c1a" stroke="#ffffff" stroke-width="4.5" stroke-linejoin="round"/>
+  <line x1="40" y1="32" x2="55" y2="32" stroke="#f97316" stroke-width="4" stroke-linecap="round"/>
+  <line x1="40" y1="38" x2="55" y2="38" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="40" y1="44" x2="50" y2="44" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Folder Body -->
+  <path d="M26 42 L39 42 L45 47 L74 47 C76.2 47 78 48.8 78 51 V76 C78 78.2 76.2 80 74 80 H26 C23.8 80 22 78.2 22 76 V46 C22 43.8 23.8 42 26 42 Z" fill="#151312" stroke="#f97316" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- User Profile Badge -->
+  <circle cx="50" cy="62" r="9.5" stroke="#ffffff" stroke-width="3.5" fill="#252321"/>
+  <circle cx="50" cy="59" r="3.2" fill="#ffffff"/>
+  <path d="M43.5 68 C44.5 64.5 55.5 64.5 56.5 68" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>
