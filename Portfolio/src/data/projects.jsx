@@ -23,9 +23,9 @@ import React from "react";
 export const projects = [
   {
     id: 1,
-    link: "https://budget-desk-system.vercel.app/",
+    link: "https://github.com/satishjadav01/BudgetDesk_System",
     pic: "ledgerflow.png",
-    heading: "LedgerFlow",
+    heading: "Budget Desk System",
     discr: "Full-stack financial workspace for invoice generation, expense tracking, real-time analytics, and client-ready PDF exports.",
     tags: [
       { name: "React", icon: <FaReact color="#61DAFB" /> },
@@ -36,7 +36,7 @@ export const projects = [
   },
   {
     id: 2,
-    link: "https://review-web-app-eight.vercel.app",
+    link: "https://github.com/satishjadav01/Review-web-app",
     pic: "megareview.png",
     heading: "MegaReview",
     discr: "Multi-tenant SaaS platform to automate Google review collection via WhatsApp & Email with private feedback shielding.",
@@ -61,7 +61,7 @@ export const projects = [
   },
   {
     id: 4,
-    link: "https://quiz-sooty-sigma-47.vercel.app/homepage",
+    link: "https://github.com/satishjadav01/quizmaster",
     pic: "project2.png",
     heading: "Quiz App",
     discr: "A Simple Quiz Application",
