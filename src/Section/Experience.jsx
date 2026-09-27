@@ -16,14 +16,6 @@ const Experience = React.forwardRef(function Experience(props, ref) {
           date="April, 2026 – Present"
           active
         />
-        <ExperienceCard
-          heading="Fullstack Intern"
-          para="Previously worked as a Full-Stack Intern at a software house, contributing to the development of responsive web applications using React, JavaScript, Node.js, and modern web technologies. Gained hands-on experience in frontend development, backend API integration, database interaction, and building end-to-end web solutions.
-
-**Dec 2025 – Jul 2026**
-"
-          date="Dec , 2025 – April, 2026"
-        />
 
       </div>
     </section>
