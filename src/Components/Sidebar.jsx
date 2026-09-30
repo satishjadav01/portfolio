@@ -18,19 +18,8 @@ const socialLinks = [
   },
 ];
 
-function Sidebar() {
+function Sidebar({ onOpenResume }) {
   const [imgLoaded, setImgLoaded] = useState(false);
-
-  const handleDownloadCV = (e) => {
-    e.preventDefault();
-    window.open("/Satish_Jadav_Resume.pdf", "_blank", "noopener,noreferrer");
-    const link = document.createElement("a");
-    link.href = "/Satish_Jadav_Resume.pdf";
-    link.download = "Satish_Jadav_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <div className="animated-border relative flex flex-col p-[2px] rounded-2xl shadow-2xl w-full">
@@ -75,7 +64,7 @@ function Sidebar() {
         {/* Bio */}
         <div className="lg:mt-2">
           <p className="font-medium leading-7 text-text-muted text-center text-xl">
-            A <span className="text-text-main">Software Engineer</span> who builds modern, scalable web applications.
+            A <span className="text-text-main">Fullstack Developer</span> who builds modern, scalable web applications & APIs.
           </p>
         </div>
 
@@ -108,18 +97,17 @@ function Sidebar() {
           ))}
         </div>
 
-        {/* Download CV — white default, orange on hover */}
-        <a
-          href="/Satish_Jadav_Resume.pdf"
-          onClick={handleDownloadCV}
+        {/* Download / View CV button */}
+        <button
+          onClick={onOpenResume}
           className="relative overflow-hidden group text-center w-full bg-surface-hover border border-border-strong text-text-main font-semibold py-3 rounded-xl hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-lg active:scale-95 block uppercase tracking-widest text-sm cursor-pointer"
         >
           <span className="relative z-10 flex items-center justify-center gap-2">
-            Download CV
+            View / Download CV
             <AnimatedEye size={20} className="text-text-main group-hover:text-white transition-colors duration-300" />
           </span>
           <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-surface/50 to-orange-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-        </a>
+        </button>
       </div>
     </div>
   );

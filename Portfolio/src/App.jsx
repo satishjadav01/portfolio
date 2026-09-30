@@ -9,10 +9,12 @@ import Skills from "./Section/Skills";
 import Contact from "./Section/Contact";
 import Footer from "./Section/Footer";
 import GradualBlur from "./Components/GradualBlur";
+import ResumeModal from "./Components/ResumeModal";
 
 function App() {
   const [isNavDocked, setIsNavDocked] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const introRef = useRef(null);
   const projectsRef = useRef(null);
   const experienceRef = useRef(null);
@@ -70,7 +72,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.05, rootMargin: "0px 0px -40px 0px" }
     );
 
     elements.forEach((element) => observer.observe(element));
@@ -79,7 +81,6 @@ function App() {
 
   return (
     <div className="flex flex-col lg:items-center relative min-h-screen">
-
       <div
         className={`relative z-50 px-4 pt-2 flex justify-center lg:pt-0 lg:fixed lg:transition-all lg:duration-500 lg:ease-out lg:left-0 lg:w-1/4 ${isNavDocked
           ? "lg:left-auto lg:right-6 lg:top-1/2 lg:w-auto lg:px-0 lg:justify-end lg:-translate-y-1/2"
@@ -98,10 +99,10 @@ function App() {
       </div>
       <div className="pt-2 lg:pt-24 flex flex-col lg:flex-row w-full max-w-[1380px] px-4 sm:px-6 lg:px-10 gap-10 xl:gap-14 justify-center items-start mx-auto">
         <div className="w-full sm:w-[350px] lg:w-[360px] xl:w-[390px] shrink-0 max-w-[90%] sm:max-w-full mx-auto lg:mx-0 lg:sticky lg:top-24 self-start">
-          <Sidebar />
+          <Sidebar onOpenResume={() => setIsResumeOpen(true)} />
         </div>
         <div className="flex-1 flex flex-col gap-10 md:gap-20 max-w-full w-full min-w-0">
-          <Intro ref={introRef} />
+          <Intro ref={introRef} onOpenResume={() => setIsResumeOpen(true)} />
           <RecentProjects ref={projectsRef} />
           <Experience ref={experienceRef} />
           <Skills ref={skillsRef} />
@@ -111,6 +112,12 @@ function App() {
       <div>
         <Footer />
       </div>
+
+      {/* Interactive ATS Resume Modal */}
+      <ResumeModal
+        isOpen={isResumeOpen}
+        onClose={() => setIsResumeOpen(false)}
+      />
 
       {/* Bottom gradual blur for smooth page footer overlay */}
       <GradualBlur

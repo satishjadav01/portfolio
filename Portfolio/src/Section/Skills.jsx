@@ -2,13 +2,28 @@ import React from "react";
 import Heading from "../Components/Heading";
 import SkillCard from "../Components/SkillCard";
 import SkillCategoryCard from "../Components/SkillCategoryCard";
-import { FaReact, FaGithub, FaNodeJs, FaPython, FaGitAlt, FaHtml5 } from "react-icons/fa";
-import { RiTailwindCssFill, RiNextjsLine, RiClaudeFill } from "react-icons/ri";
-import { IoLogoJavascript } from "react-icons/io";
-import { IoLogoCss3 } from "react-icons/io5";
-import { SiPostman, SiVercel, SiPostgresql, SiMongodb, SiOpenai, SiGithubcopilot } from "react-icons/si";
-import { TbApi } from "react-icons/tb";
-import { useTheme } from "../context/ThemeContext";
+import {
+  ReactIcon,
+  TailwindIcon,
+  JavaScriptIcon,
+  HTML5Icon,
+  CSS3Icon,
+  NextjsIcon,
+  NodejsIcon,
+  ExpressIcon,
+  PostgresIcon,
+  MongoIcon,
+  SQLIcon,
+  RestApiIcon,
+  JWTIcon,
+  PythonIcon,
+  GitIcon,
+  GitHubIcon,
+  PostmanIcon,
+  VSCodeIcon,
+  NpmIcon,
+  VercelIcon,
+} from "../Components/TechIcons";
 import { 
   CursorIcon, 
   AntigravityIcon, 
@@ -21,44 +36,43 @@ import {
 
 const categorizedSkills = {
   frontend: [
-    { logo: <FaReact />, title: "React JS", color: "#61DAFB" },
-    { logo: <RiTailwindCssFill />, title: "TailWind", color: "#06B6D4" },
-    { logo: <RiNextjsLine />, title: "Next JS", color: "#FFFFFF" },
-    { logo: <FaHtml5 />, title: "HTML5", color: "#E34F26" },
-    { logo: <IoLogoCss3 />, title: "CSS", color: "#264DE4" },
-    { logo: <IoLogoJavascript />, title: "JavaScript", color: "#F7DF1E" },
+    { logo: <ReactIcon size={46} />, title: "React.js", color: "#00D8FF" },
+    { logo: <TailwindIcon size={46} />, title: "Tailwind CSS", color: "#06B6D4" },
+    { logo: <JavaScriptIcon size={44} />, title: "JavaScript", color: "#F7DF1E" },
+    { logo: <HTML5Icon size={44} />, title: "HTML5", color: "#E34F26" },
+    { logo: <CSS3Icon size={44} />, title: "CSS3", color: "#1572B6" },
+    { logo: <NextjsIcon size={44} />, title: "Next.js", color: "#000000" },
   ],
   backend: [
-    { logo: <FaNodeJs />, title: "Node.js", color: "#339933" },
-    { logo: <FaPython />, title: "Python", color: "#3776AB" },
-    { logo: <SiPostgresql />, title: "PostgreSQL", color: "#336791" },
-    { logo: <SiMongodb />, title: "MongoDB", color: "#47A248" },
-    { logo: <TbApi />, title: "REST API", color: "#0096D6" },
+    { logo: <NodejsIcon size={44} />, title: "Node.js", color: "#5FA04E" },
+    { logo: <ExpressIcon size={44} />, title: "Express.js", color: "#000000" },
+    { logo: <PostgresIcon size={44} />, title: "PostgreSQL", color: "#4169E1" },
+    { logo: <MongoIcon size={44} />, title: "MongoDB", color: "#47A248" },
+    { logo: <SQLIcon size={44} />, title: "SQL", color: "#0284C7" },
+    { logo: <RestApiIcon size={44} />, title: "RESTful APIs", color: "#0284C7" },
+    { logo: <JWTIcon size={44} />, title: "JWT & Auth", color: "#D63AFF" },
+    { logo: <PythonIcon size={44} />, title: "Python", color: "#3776AB" },
   ],
   tools: [
-    { logo: <FaGitAlt />, title: "Git", color: "#F05032" },
-    { logo: <FaGithub />, title: "Github", color: "#E6EDF3" },
-    { logo: <SiVercel />, title: "Vercel", color: "#FFFFFF" },
-    { logo: <SiPostman />, title: "Postman", color: "#FF6C37" },
+    { logo: <GitIcon size={44} />, title: "Git", color: "#F05032" },
+    { logo: <GitHubIcon size={44} />, title: "GitHub", color: "#181717" },
+    { logo: <PostmanIcon size={44} />, title: "Postman", color: "#FF6C37" },
+    { logo: <VSCodeIcon size={44} />, title: "VS Code", color: "#007ACC" },
+    { logo: <NpmIcon size={44} />, title: "npm", color: "#CB3837" },
+    { logo: <VercelIcon size={44} />, title: "Vercel", color: "#000000" },
   ],
   aiTools: [
-    { logo: <CursorIcon />, title: "Cursor", color: "#FFFFFF" },
-    { logo: <AntigravityIcon />, title: "Antigravity", color: "#A855F7" },
-    { logo: <ClaudeIcon />, title: "Claude", color: "#D96B43" },
-    { logo: <CodexIcon />, title: "Codex", color: "#FFFFFF" },
-    { logo: <AmazonQIcon />, title: "Amazon Q", color: "#2563EB" },
-    { logo: <CopilotIcon />, title: "Copilot", color: "#0284C7" },
-    { logo: <GrokIcon />, title: "Grok", color: "#FFFFFF" },
+    { logo: <CursorIcon size={44} />, title: "Cursor", color: "#121214" },
+    { logo: <AntigravityIcon size={44} />, title: "Antigravity", color: "#A855F7" },
+    { logo: <ClaudeIcon size={44} />, title: "Claude", color: "#D96B43" },
+    { logo: <CodexIcon size={44} />, title: "Codex", color: "#000000" },
+    { logo: <AmazonQIcon size={44} />, title: "Amazon Q", color: "#2563EB" },
+    { logo: <CopilotIcon size={44} />, title: "Copilot", color: "#0284C7" },
+    { logo: <GrokIcon size={44} />, title: "Grok", color: "#000000" },
   ]
 };
 
 const Skills = React.forwardRef(function Skills(props, ref) {
-  const { theme } = useTheme();
-
-  const adaptColor = (color) => {
-    return theme === 'light' && (color === '#FFFFFF' || color === '#E6EDF3') ? '#000000' : color;
-  };
-
   return (
     <section ref={ref} data-name="Skills" className="scroll-mt-28">
       <div className="mb-8">
@@ -69,28 +83,28 @@ const Skills = React.forwardRef(function Skills(props, ref) {
         {/* Frontend */}
         <SkillCategoryCard title="Frontend">
           {categorizedSkills.frontend.map((skill, i) => (
-            <SkillCard key={i} {...skill} color={adaptColor(skill.color)} />
+            <SkillCard key={i} {...skill} />
           ))}
         </SkillCategoryCard>
 
         {/* Backend */}
-        <SkillCategoryCard title="Backend">
+        <SkillCategoryCard title="Backend & Databases">
           {categorizedSkills.backend.map((skill, i) => (
-            <SkillCard key={i} {...skill} color={adaptColor(skill.color)} />
+            <SkillCard key={i} {...skill} />
           ))}
         </SkillCategoryCard>
 
-        {/* Tools */}
-        <SkillCategoryCard title="Tools">
+        {/* Developer Tools */}
+        <SkillCategoryCard title="Developer Tools">
           {categorizedSkills.tools.map((skill, i) => (
-            <SkillCard key={i} {...skill} color={adaptColor(skill.color)} />
+            <SkillCard key={i} {...skill} />
           ))}
         </SkillCategoryCard>
 
-        {/* AI Tools */}
-        <SkillCategoryCard title="AI Tools">
+        {/* AI-Assisted Engineering */}
+        <SkillCategoryCard title="AI-Assisted Engineering">
           {categorizedSkills.aiTools.map((skill, i) => (
-            <SkillCard key={i} {...skill} color={adaptColor(skill.color)} />
+            <SkillCard key={i} {...skill} />
           ))}
         </SkillCategoryCard>
       </div>

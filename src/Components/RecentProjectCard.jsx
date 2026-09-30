@@ -10,6 +10,7 @@ function RecentProjectCard({ pic, heading, discr, tags = [] }) {
     target.style.setProperty("--mouse-x", `${x}px`);
     target.style.setProperty("--mouse-y", `${y}px`);
   };
+  
 
   return (
     <div

@@ -1,65 +1,29 @@
 import React from "react";
 
-// 1. Cursor: Realistic 3D faceted dark cube with silver/white arrow highlight
+// 1. Cursor: Official brand image
 export const CursorIcon = ({ size = "1em", className = "", ...props }) => (
-  <svg
-    viewBox="0 0 64 64"
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfxKUQvxEqx_C82N_jZ9FD97-0FCzRQT0xHdHsbz4IQ4fUjKsF_9xOSfY&s=10"
+    alt="Cursor AI"
     width={size}
     height={size}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
     className={className}
+    style={{ objectFit: "contain", borderRadius: "8px" }}
     {...props}
-  >
-    {/* Base hexagonal cube */}
-    <path d="M32 4L58 19V45L32 60L6 45V19L32 4Z" fill="#121214" />
-    
-    {/* Top facet */}
-    <path d="M32 4L58 19L32 33.5L6 19L32 4Z" fill="#2C2C30" />
-    
-    {/* Left facet */}
-    <path d="M6 19L32 33.5V60L6 45V19Z" fill="#1A1A1D" />
-    
-    {/* Right facet */}
-    <path d="M32 33.5L58 19V45L32 60V33.5Z" fill="#222226" />
-    
-    {/* 3D Arrow White/Silver Facet pointing down */}
-    <path d="M32 12L51 22.8L32 36.5L13 22.8L32 12Z" fill="#E5E5EA" />
-    <path d="M32 36.5L51 22.8V39L32 52.5V36.5Z" fill="#FFFFFF" />
-    <path d="M13 22.8L32 36.5V52.5L13 39V22.8Z" fill="#AEAEB2" />
-  </svg>
+  />
 );
 
-// 2. Antigravity: Vibrant rainbow gradient rounded ribbon "A" logo
+// 2. Antigravity: Official brand image
 export const AntigravityIcon = ({ size = "1em", className = "", ...props }) => (
-  <svg
-    viewBox="0 0 64 64"
+  <img
+    src="https://miro.medium.com/1*YCV99o2CWe_txaatOclaWA.png"
+    alt="Antigravity"
     width={size}
     height={size}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
     className={className}
+    style={{ objectFit: "contain", borderRadius: "6px" }}
     {...props}
-  >
-    <defs>
-      <linearGradient id="antigravityRainbowGrad" x1="10%" y1="90%" x2="90%" y2="90%">
-        <stop offset="0%" stopColor="#00E5FF" />
-        <stop offset="25%" stopColor="#0077FF" />
-        <stop offset="50%" stopColor="#9900FF" />
-        <stop offset="75%" stopColor="#FF0077" />
-        <stop offset="100%" stopColor="#FFB300" />
-      </linearGradient>
-    </defs>
-    <path
-      d="M17 52C13.5 52 11 49.5 11 46C11 43.5 12.5 41 14.5 37.5L28 14C29.5 11.5 31.5 10 34 10C36.5 10 38.5 11.5 40 14L53.5 37.5C55.5 41 57 43.5 57 46C57 49.5 54.5 52 51 52C48 52 45.8 50 44 46.5L39.5 38.5C38.5 36.8 36.5 35.5 34.5 35.5C32.5 35.5 30.5 36.8 29.5 38.5L24 46.5C22.2 50 20 52 17 52Z"
-      fill="url(#antigravityRainbowGrad)"
-    />
-    <path
-      d="M34 23L29 32H39L34 23Z"
-      fill="url(#antigravityRainbowGrad)"
-      opacity="0.95"
-    />
-  </svg>
+  />
 );
 
 // 3. Claude: Authentic Anthropic 14-ray terracotta sunburst
@@ -109,38 +73,17 @@ export const CodexIcon = ({ size = "1em", className = "", ...props }) => (
   </svg>
 );
 
-// 5. Amazon Q: Gradient Rounded Hexagon with White Stylized Q
+// 5. Amazon Q: Official brand image
 export const AmazonQIcon = ({ size = "1em", className = "", ...props }) => (
-  <svg
-    viewBox="0 0 64 64"
+  <img
+    src="https://amazonwebservices.gallerycdn.vsassets.io/extensions/amazonwebservices/amazon-q-vscode/2.7.0/1788465087702/Microsoft.VisualStudio.Services.Icons.Default"
+    alt="Amazon Q"
     width={size}
     height={size}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
     className={className}
+    style={{ objectFit: "contain", borderRadius: "8px" }}
     {...props}
-  >
-    <defs>
-      <linearGradient id="amazonQGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#00B4D8" />
-        <stop offset="35%" stopColor="#0077B6" />
-        <stop offset="70%" stopColor="#5A189A" />
-        <stop offset="100%" stopColor="#7B2CBF" />
-      </linearGradient>
-    </defs>
-    {/* Rounded Hexagon Background */}
-    <path
-      d="M32 5.5C33.5 5.5 35 6.4 36.3 7.1L53.7 17.2C56.4 18.7 58 21.5 58 24.5V41.5C58 44.5 56.4 47.3 53.7 48.8L36.3 58.9C35 59.6 33.5 60.5 32 60.5C30.5 60.5 29 59.6 27.7 58.9L10.3 48.8C7.6 47.3 6 44.5 6 41.5V24.5C6 21.5 7.6 18.7 10.3 17.2L27.7 7.1C29 6.4 30.5 5.5 32 5.5Z"
-      fill="url(#amazonQGradient)"
-    />
-    {/* Inner White Q Frame */}
-    <path
-      d="M32 19C38.6 19 44 24.4 44 31C44 37.6 38.6 43 32 43C25.4 43 20 37.6 20 31C20 24.4 25.4 19 32 19ZM32 25C28.7 25 26 27.7 26 31C26 34.3 28.7 37 32 37C35.3 37 38 34.3 38 31C38 27.7 35.3 25 32 25Z"
-      fill="#FFFFFF"
-    />
-    {/* Q Tail */}
-    <rect x="34.5" y="34.5" width="8.5" height="8.5" rx="1.5" fill="#FFFFFF" />
-  </svg>
+  />
 );
 
 // 6. GitHub Copilot: Official GitHub Copilot Robot Helmet Icon

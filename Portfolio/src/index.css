@@ -169,4 +169,23 @@ body::after {
   color: #000000 !important;
   border-color: rgba(0, 0, 0, 0.2) !important;
   background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ── Experience Card Styles ── */
+.experience-bullet {
+  color: var(--text-secondary);
+}
+
+.light .experience-bullet {
+  color: #0f172a !important;
+}
+
+.experience-tag {
+  color: var(--text-secondary);
+}
+
+.light .experience-tag {
+  color: #0f172a !important;
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
 }

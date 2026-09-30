@@ -2,36 +2,32 @@ import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { motion } from "framer-motion";
 
-function SkillCard({ logo, title, color }) {
+function SkillCard({ logo, title, color = "#f97316" }) {
   const [hovered, setHovered] = useState(false);
   const { theme } = useTheme();
 
-  const showColor = theme === 'light' || hovered;
-
   return (
     <motion.div
-      whileHover={{ y: -5, scale: 1.02 }}
+      whileHover={{ y: -5, scale: 1.03 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className="flex flex-col items-center justify-center py-4 px-2 gap-3 rounded-2xl transition-colors duration-300 border cursor-default group overflow-hidden w-full"
+      className="flex flex-col items-center justify-center py-5 px-2.5 gap-3 rounded-2xl transition-all duration-300 border cursor-default group overflow-hidden w-full bg-card hover:bg-surface-hover shadow-sm"
       style={{
-        backgroundColor: "var(--bg-card)",
-        borderColor: showColor ? `${color}40` : "var(--border-color)",
-        boxShadow: showColor ? `0 8px 25px -10px ${color}25` : "none",
+        borderColor: hovered ? `${color}60` : "var(--border-color)",
+        boxShadow: hovered ? `0 12px 28px -8px ${color}35` : "0 2px 8px rgba(0,0,0,0.04)",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Icon */}
+      {/* Icon Container with authentic brand styling */}
       <motion.div
-        className="text-4xl md:text-5xl lg:text-6xl"
-        animate={{ 
-          scale: hovered ? 1.15 : 1,
-          rotate: hovered ? 5 : 0,
+        className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center text-4xl md:text-5xl"
+        animate={{
+          scale: hovered ? 1.12 : 1,
+          rotate: hovered ? 3 : 0,
         }}
         transition={{ type: "spring", stiffness: 300, damping: 15 }}
         style={{
-          color: showColor ? color : "var(--text-muted)",
-          filter: showColor ? `drop-shadow(0 0 12px ${color}50)` : "none"
+          filter: hovered ? `drop-shadow(0 0 10px ${color}40)` : "none"
         }}
       >
         {logo}
@@ -39,8 +35,7 @@ function SkillCard({ logo, title, color }) {
 
       {/* Title */}
       <h3
-        className="text-[10px] sm:text-[11px] md:text-xs font-bold tracking-wide uppercase transition-colors duration-300 text-center whitespace-nowrap w-full px-1"
-        style={{ color: showColor ? color : "var(--text-secondary)" }}
+        className="text-[11px] sm:text-xs font-bold tracking-tight text-center whitespace-nowrap w-full px-1 text-text-main group-hover:text-orange-500 transition-colors duration-200"
       >
         {title}
       </h3>
