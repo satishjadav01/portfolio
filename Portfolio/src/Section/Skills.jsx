@@ -4,6 +4,7 @@ import SkillCard from "../Components/SkillCard";
 import SkillCategoryCard from "../Components/SkillCategoryCard";
 import {
   ReactIcon,
+  TypeScriptIcon,
   TailwindIcon,
   JavaScriptIcon,
   HTML5Icon,
@@ -37,8 +38,9 @@ import {
 const categorizedSkills = {
   frontend: [
     { logo: <ReactIcon size={46} />, title: "React.js", color: "#00D8FF" },
-    { logo: <TailwindIcon size={46} />, title: "Tailwind CSS", color: "#06B6D4" },
+    { logo: <TypeScriptIcon size={44} />, title: "TypeScript", color: "#3178C6" },
     { logo: <JavaScriptIcon size={44} />, title: "JavaScript", color: "#F7DF1E" },
+    { logo: <TailwindIcon size={46} />, title: "Tailwind CSS", color: "#06B6D4" },
     { logo: <HTML5Icon size={44} />, title: "HTML5", color: "#E34F26" },
     { logo: <CSS3Icon size={44} />, title: "CSS3", color: "#1572B6" },
     { logo: <NextjsIcon size={44} />, title: "Next.js", color: "#000000" },
