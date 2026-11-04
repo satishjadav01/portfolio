@@ -14,7 +14,7 @@ import {
   ExpressIcon, 
   PostgresIcon,
   MongoIcon, 
-  SQLIcon,
+  SQLIcon,   
   RestApiIcon,
   JWTIcon,
   PythonIcon,

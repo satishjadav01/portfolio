@@ -9,7 +9,7 @@ const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
    
   const showMoreProjects = () => {
     setVisibleCount((prevCount) => prevCount + 3);
-  };
+  };  
 
   const hasMore = visibleCount < projects.length;
 
