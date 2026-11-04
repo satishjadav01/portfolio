@@ -16,7 +16,7 @@ function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const introRef = useRef(null);
-  const projectsRef = useRef(null);
+  const projectsRef = useRef(null); 
   const experienceRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);

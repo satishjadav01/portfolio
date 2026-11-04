@@ -5,7 +5,7 @@ import { FiCheckCircle, FiLoader } from "react-icons/fi";
 const Contact = React.forwardRef(function Contact(props, ref) {
   const [status, setStatus] = useState("idle"); // "idle" | "submitting" | "success" | "error"
   const [errorMessage, setErrorMessage] = useState("");
-
+   
   const labelStyle = "text-text-secondary text-xs font-medium tracking-wide";
   const inpStyle =
     "w-full text-text-secondary text-sm bg-surface-hover p-2.5 rounded-lg placeholder-text-muted/70 border border-border-subtle outline-none focus:border-orange-500/60 focus:bg-card transition-all duration-200 placeholder:text-xs";

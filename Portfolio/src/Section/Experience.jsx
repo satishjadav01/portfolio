@@ -5,7 +5,7 @@ import { FaBuilding, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 
 const Experience = React.forwardRef(function Experience(props, ref) {
   const experiences = [
-    {
+     {
       company: "EUROPA INFOTECH PVT. LTD.",
       role: "Fullstack Developer",
       location: "Surat, Gujarat",

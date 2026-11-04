@@ -6,7 +6,7 @@ import {
   ReactIcon,
   TypeScriptIcon,
   TailwindIcon,
-  JavaScriptIcon,
+  JavaScriptIcon,   
   HTML5Icon,
   CSS3Icon,
   NextjsIcon,
