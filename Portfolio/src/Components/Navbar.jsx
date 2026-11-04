@@ -9,7 +9,7 @@ import { useTheme } from "../context/ThemeContext";
 function Navbar({
   isDocked,
   activeSection,
-  onHomeClick,
+  onHomeClick, 
   onProjectsClick,
   onExperienceClick,
   onSkillsClick,
