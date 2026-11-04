@@ -11,7 +11,7 @@ export const ReactIcon = ({ size = "1em", className = "" }) => (
       <ellipse cx="57.5" cy="50" rx="52" ry="20" transform="rotate(60 57.5 50)" />
       <ellipse cx="57.5" cy="50" rx="52" ry="20" transform="rotate(120 57.5 50)" />
     </g>
-  </svg>
+  </svg>   
 );
 
 // 2. Tailwind CSS: Official Cyan Dual Wave

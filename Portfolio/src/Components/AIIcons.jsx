@@ -4,13 +4,13 @@ import React from "react";
 export const CursorIcon = ({ size = "1em", className = "", ...props }) => (
   <img
     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfxKUQvxEqx_C82N_jZ9FD97-0FCzRQT0xHdHsbz4IQ4fUjKsF_9xOSfY&s=10"
-    alt="Cursor AI"
+    alt="Cursor AI"  
     width={size}
     height={size}
     className={className}
     style={{ objectFit: "contain", borderRadius: "8px" }}
     {...props}
-  />
+  />  
 );
 
 // 2. Antigravity: Official brand image

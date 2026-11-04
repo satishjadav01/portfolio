@@ -5,7 +5,7 @@ export default function ResumeModal({ isOpen, onClose }) {
   const [copied, setCopied] = useState(false);
 
   if (!isOpen) return null;
-
+ 
   const handlePrint = () => {
     window.print();
   };

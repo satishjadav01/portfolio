@@ -6,7 +6,7 @@ import { projects } from "../data/projects.jsx";
 
 const RecentProjects = React.forwardRef(function RecentProjects(props, ref) {
   const [visibleCount, setVisibleCount] = useState(3);
-
+   
   const showMoreProjects = () => {
     setVisibleCount((prevCount) => prevCount + 3);
   };
