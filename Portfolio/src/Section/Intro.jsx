@@ -48,7 +48,7 @@ const Intro = React.forwardRef(function Intro({ onOpenResume }, ref) {
       {/* Stats & Resume CTA */}
       <motion.div variants={itemVariants} className="flex flex-wrap justify-center md:justify-start w-full gap-8 md:gap-16 items-center">
         {[
-          { count: "1.3", suffix: "+", label: "YEARS OF EXPERIENCE" },
+          { count: "1.5", suffix: "+", label: "YEARS OF EXPERIENCE" },
           { count: "20", suffix: "+", label: "PROJECTS COMPLETED" },
           { count: "8.5", suffix: "", label: "BCA CGPA" },
         ].map((stat, i) => (
