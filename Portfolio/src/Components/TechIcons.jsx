@@ -68,7 +68,6 @@ export const NextjsIcon = ({ size = "1em", className = "" }) => (
   </svg>
 );
 
-
 import { FaNodeJs } from "react-icons/fa6";
 import { SiExpress, SiMongodb, SiJsonwebtokens, SiTypescript } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
