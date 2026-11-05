@@ -12,7 +12,7 @@ export const CursorIcon = ({ size = "1em", className = "", ...props }) => (
     {...props}
   />  
 );
-
+   
 // 2. Antigravity: Official brand image
 export const AntigravityIcon = ({ size = "1em", className = "", ...props }) => (
   <img

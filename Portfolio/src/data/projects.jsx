@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import {
-  SiFirebase,
+  SiFirebase,   
   SiTypescript,
   SiJavascript,
   SiRedux,

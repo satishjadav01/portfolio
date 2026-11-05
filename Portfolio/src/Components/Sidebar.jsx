@@ -4,19 +4,19 @@ import { CiLinkedin } from "react-icons/ci";
 import { FiMail, FiPhone } from "react-icons/fi";
 import AnimatedEye from "./AnimatedEye";
 import ThemeToggle from "./ThemeToggle";
-
-const socialLinks = [
-  {
-    Icon: FaGithub,
-    href: "https://github.com/satishjadav01",
-    hoverColor: "#e6edf3",
-  },
-  {
-    Icon: CiLinkedin,
-    href: "https://www.linkedin.com/in/satish-jadav-7716562a1/",
-    hoverColor: "#0A66C2",
-  },
-];
+ 
+  const socialLinks = [
+    {
+      Icon: FaGithub,
+      href: "https://github.com/satishjadav01",
+      hoverColor: "#e6edf3",
+    },
+    {
+      Icon: CiLinkedin,
+      href: "https://www.linkedin.com/in/satish-jadav-7716562a1/",
+      hoverColor: "#0A66C2",
+    },
+  ];
 
 function Sidebar({ onOpenResume }) {
   const [imgLoaded, setImgLoaded] = useState(false);
