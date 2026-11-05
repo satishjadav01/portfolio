@@ -35,7 +35,7 @@ function Sidebar({ onOpenResume }) {
           {/* Skeleton shimmer — visible until image loads */}
           {!imgLoaded && (
             <div className="sidebar-skeleton absolute inset-0 rounded-2xl" />
-          )}
+          )}   
           <img
             src="/Media.jpg"
             alt="Satish Jadav"  
