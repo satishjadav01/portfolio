@@ -67,12 +67,12 @@ export const NextjsIcon = ({ size = "1em", className = "" }) => (
     />
   </svg>
 );
-
+ 
 import { FaNodeJs } from "react-icons/fa6";
 import { SiExpress, SiMongodb, SiJsonwebtokens, SiTypescript } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { TbApi } from "react-icons/tb";
-
+ 
 // ==================== BACKEND & DATABASE ICONS ====================
 
 // 7. Node.js: Official Green Hexagon Logo with JS
