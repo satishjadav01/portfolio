@@ -52,7 +52,7 @@ function Sidebar({ onOpenResume }) {
             Available for Work
           </span>
         </div>
-
+    
         {/* Name */}
         <div className="text-center">
           <h1 className="font-poppins font-bold text-3xl text-text-main">
@@ -60,7 +60,7 @@ function Sidebar({ onOpenResume }) {
           </h1>
           <div className="h-0.5 w-10 bg-orange-500 rounded-full mx-auto mt-2" />
         </div>
-
+   
         {/* Bio */}
         <div className="lg:mt-2">
           <p className="font-medium leading-7 text-text-muted text-center text-xl">
