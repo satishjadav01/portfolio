@@ -20,7 +20,7 @@ const socialLinks = [
    
 function Sidebar({ onOpenResume }) {
   const [imgLoaded, setImgLoaded] = useState(false);
-    
+
   return (
     <div className="animated-border relative flex flex-col p-[2px] rounded-2xl shadow-2xl w-full">
       <div className="bg-surface p-5 lg:p-8 xl:p-10 rounded-2xl items-center gap-8 flex flex-col relative">
@@ -38,7 +38,7 @@ function Sidebar({ onOpenResume }) {
           )}
           <img
             src="/Media.jpg"
-            alt="Satish Jadav"
+            alt="Satish Jadav"  
             width={533}
             height={800}
             loading="eager"
