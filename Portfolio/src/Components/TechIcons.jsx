@@ -13,7 +13,7 @@ export const ReactIcon = ({ size = "1em", className = "" }) => (
     </g>
   </svg>   
 );
-
+   
 // 2. Tailwind CSS: Official Cyan Dual Wave
 export const TailwindIcon = ({ size = "1em", className = "" }) => (
   <svg viewBox="0 0 64 64" width={size} height={size} fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
@@ -24,7 +24,7 @@ export const TailwindIcon = ({ size = "1em", className = "" }) => (
     />
   </svg>
 );
-
+   
 // 3. JavaScript: Official SimpleIcons Yellow Badge
 export const JavaScriptIcon = ({ size = "1em", className = "" }) => (
   <svg viewBox="0 0 24 24" width={size} height={size} fill="#F7DF1E" xmlns="http://www.w3.org/2000/svg" className={className}>
