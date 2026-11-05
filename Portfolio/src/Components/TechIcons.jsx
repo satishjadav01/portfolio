@@ -46,7 +46,7 @@ export const HTML5Icon = ({ size = "1em", className = "" }) => (
     <path d="M32 24.5V31H43L42 41.5L32 43.5V50L45 46.5L46.5 31L47 24.5H32ZM32 12V18H50.5L51 12H32Z" fill="#FFFFFF" />
   </svg>
 );
-
+  
 // 5. CSS3: Official Blue Shield with White '3'
 export const CSS3Icon = ({ size = "1em", className = "" }) => (
   <svg viewBox="0 0 64 64" width={size} height={size} fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
