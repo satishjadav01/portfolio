@@ -56,7 +56,7 @@ export const CSS3Icon = ({ size = "1em", className = "" }) => (
     <path d="M32 24V18H46L45.5 24H32ZM32 31V37H44.5L43.5 48.7L32 52V45.7L39.5 43.5L40 37H32V31H45L45.5 24H32Z" fill="#FFFFFF" />
   </svg>
 );
-
+   
 // 6. Next.js: Official Black Circle with White 'N'
 export const NextjsIcon = ({ size = "1em", className = "" }) => (
   <svg viewBox="0 0 64 64" width={size} height={size} fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
