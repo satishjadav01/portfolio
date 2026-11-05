@@ -36,7 +36,7 @@ export const JavaScriptIcon = ({ size = "1em", className = "" }) => (
 export const TypeScriptIcon = ({ size = "1em", className = "", color = "#3178C6" }) => (
   <SiTypescript size={size} className={className} color={color} />
 );
-
+    
 // 4. HTML5: Official Orange Shield with White '5'
 export const HTML5Icon = ({ size = "1em", className = "" }) => (
   <svg viewBox="0 0 64 64" width={size} height={size} fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
